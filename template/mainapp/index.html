@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Summer!</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static "css/indexmaster.css" %}">
+  </head>
+  <body>
+    <div class="sun"></div>
+    <div id="pageWrapper">
+      <div class="wave"></div>
+    </div>
+    <div class="beach"></div>
+    <img src="{% static "images/palmtree.png" %}" alt="">
+
+    </div>
+    <div class="input">
+      <input type="text" placeholder="Enter the city" class="input_text">
+      <br>
+      <input style="margin-top:2em;" type="submit" value="Submit" class="submit btn btn-primary">
+    </div>
+    <div class="container" style="position:absolute;top:100px;left:400px;z-index:1000;width:1500px;display: none;" >
+      <!-- <div class="container" style="position:absolute;top:0px;left:5%;z-index:1000;width:1400px;display: none;" > -->
+      <div class="card">
+        <h1 class="name" id="name"></h1>
+        <p class="temp"></p>
+        <p class="clouds"></p>
+        <p class="desc"></p>
+        <input style="margin-top:2em;" type="submit" value="Reload" class="rld btn btn-primary">
+      </div>
+    </div>
+    <script src="{% static "js/index.js" %}"></script>
+  </body>
+</html>
